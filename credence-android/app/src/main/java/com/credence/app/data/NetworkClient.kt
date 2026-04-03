@@ -17,6 +17,10 @@ import retrofit2.http.POST
 import java.util.concurrent.TimeUnit
 
 
+//Sent to Ai
+
+data class ChatRequest(val message: String)
+
 // Model for the active chat response
 data class ChatResponse(
     val reply: String
@@ -44,10 +48,10 @@ data class ShareResponse(
 
 interface ApiService {
     @POST("/api/chat/message")
-    suspend fun sendChatMessage(@Body payload: Map<String, Any>): ChatResponse
+    suspend fun sendChatMessage(@Body payload: ChatRequest): ChatResponse
 
     @POST("/api/chat/complete")
-    suspend fun completeSession(@Body payload: Map<String, Any>): FinalReportResponse
+    suspend fun completeSession(): FinalReportResponse
 
     @GET("/api/logs/all")
     suspend fun getAllLogs(): List<LogResponse>
