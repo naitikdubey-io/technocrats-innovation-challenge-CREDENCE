@@ -19,12 +19,15 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.credence.app.ui.AuthScreen
+import com.credence.app.ui.OnboardingScreen
 import com.credence.app.ui.Screen
+import com.credence.app.ui.SplashScreen
 import com.credence.app.viewmodel.MainViewModel
-// IMPORTANT: Ensure this matches your exact theme package
+
 import com.credence.app.ui.theme.CredenceTheme
-import com.yourcompany.credence.ui.theme.DeepEspresso
-import com.yourcompany.credence.ui.theme.SoftMushroom
+import com.credence.app.ui.theme.DeepEspresso
+import com.credence.app.ui.theme.SoftMushroom
 
 
 class MainActivity : ComponentActivity() {
@@ -96,7 +99,7 @@ fun CredenceBottomNavigation(navController: NavHostController, currentRoute: Str
     ) {
         // Home Tab
         NavigationBarItem(
-            icon = { Text("🏠") }, // Placeholder emoji until we add real icons
+            icon = { Text("🏠") },
             label = { Text("Home", style = MaterialTheme.typography.labelMedium) },
             selected = currentRoute == Screen.Home.route,
             onClick = {
@@ -164,24 +167,8 @@ fun CredenceBottomNavigation(navController: NavHostController, currentRoute: Str
 }
 
 
-@Composable fun SplashScreen(navController: NavHostController) {
-    Column(Modifier.fillMaxSize(), Arrangement.Center, Alignment.CenterHorizontally) {
-        Text("Splash Screen")
-        Button(onClick = { navController.navigate(Screen.Onboarding.route) }) { Text("Go to Onboarding") }
-    }
-}
-@Composable fun OnboardingScreen(navController: NavHostController) {
-    Column(Modifier.fillMaxSize(), Arrangement.Center, Alignment.CenterHorizontally) {
-        Text("Onboarding Flow")
-        Button(onClick = { navController.navigate(Screen.Auth.route) }) { Text("Go to Auth") }
-    }
-}
-@Composable fun AuthScreen(navController: NavHostController) {
-    Column(Modifier.fillMaxSize(), Arrangement.Center, Alignment.CenterHorizontally) {
-        Text("Auth / Google Login")
-        Button(onClick = { navController.navigate(Screen.Home.route) { popUpTo(Screen.Auth.route) { inclusive = true } } }) { Text("Simulate Login") }
-    }
-}
+
+
 @Composable fun HomeScreen(navController: NavHostController, viewModel: MainViewModel) {
     Column(Modifier.fillMaxSize(), Arrangement.Center, Alignment.CenterHorizontally) {
         Text("Home Dashboard")
