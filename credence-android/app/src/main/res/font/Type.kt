@@ -9,7 +9,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import com.credence.app.R
 
-
+import com.yourcompany.credence.ui.theme.DeepEspresso
+import com.yourcompany.credence.ui.theme.SoftMushroom
 
 
 // 1. Declare Font Families
