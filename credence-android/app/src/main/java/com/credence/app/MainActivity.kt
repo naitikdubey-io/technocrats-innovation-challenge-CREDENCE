@@ -20,6 +20,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.credence.app.ui.AuthScreen
+import com.credence.app.ui.HomeScreen
 import com.credence.app.ui.OnboardingScreen
 import com.credence.app.ui.Screen
 import com.credence.app.ui.SplashScreen
@@ -169,12 +170,7 @@ fun CredenceBottomNavigation(navController: NavHostController, currentRoute: Str
 
 
 
-@Composable fun HomeScreen(navController: NavHostController, viewModel: MainViewModel) {
-    Column(Modifier.fillMaxSize(), Arrangement.Center, Alignment.CenterHorizontally) {
-        Text("Home Dashboard")
-        Button(onClick = { navController.navigate(Screen.Chat.route) }) { Text("Open Chat") }
-    }
-}
+
 @Composable fun ChatScreen(navController: NavHostController, viewModel: MainViewModel) {
     Column(Modifier.fillMaxSize(), Arrangement.Center, Alignment.CenterHorizontally) {
         Text("Active Chat Interface")
