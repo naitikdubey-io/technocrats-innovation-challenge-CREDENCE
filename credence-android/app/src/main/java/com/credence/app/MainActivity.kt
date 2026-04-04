@@ -20,6 +20,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.credence.app.ui.AuthScreen
+import com.credence.app.ui.ChatScreen
 import com.credence.app.ui.HomeScreen
 import com.credence.app.ui.OnboardingScreen
 import com.credence.app.ui.Screen
@@ -171,12 +172,7 @@ fun CredenceBottomNavigation(navController: NavHostController, currentRoute: Str
 
 
 
-@Composable fun ChatScreen(navController: NavHostController, viewModel: MainViewModel) {
-    Column(Modifier.fillMaxSize(), Arrangement.Center, Alignment.CenterHorizontally) {
-        Text("Active Chat Interface")
-        Button(onClick = { navController.popBackStack() }) { Text("End Chat") }
-    }
-}
+
 @Composable fun TimelineScreen(navController: NavHostController, viewModel: MainViewModel) {
     Column(Modifier.fillMaxSize(), Arrangement.Center, Alignment.CenterHorizontally) {
         Text("Timeline Ledger")
