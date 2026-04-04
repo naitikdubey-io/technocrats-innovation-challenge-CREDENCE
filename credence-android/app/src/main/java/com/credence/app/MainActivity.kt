@@ -25,6 +25,7 @@ import com.credence.app.ui.HomeScreen
 import com.credence.app.ui.OnboardingScreen
 import com.credence.app.ui.Screen
 import com.credence.app.ui.SplashScreen
+import com.credence.app.ui.TimelineScreen
 import com.credence.app.viewmodel.MainViewModel
 
 import com.credence.app.ui.theme.CredenceTheme
@@ -173,12 +174,7 @@ fun CredenceBottomNavigation(navController: NavHostController, currentRoute: Str
 
 
 
-@Composable fun TimelineScreen(navController: NavHostController, viewModel: MainViewModel) {
-    Column(Modifier.fillMaxSize(), Arrangement.Center, Alignment.CenterHorizontally) {
-        Text("Timeline Ledger")
-        Button(onClick = { navController.navigate(Screen.ShareQR.route) }) { Text("Share QR") }
-    }
-}
+
 @Composable fun ShareQRScreen(navController: NavHostController, viewModel: MainViewModel) {
     Column(Modifier.fillMaxSize(), Arrangement.Center, Alignment.CenterHorizontally) {
         Text("Zero-Trust QR Gate")

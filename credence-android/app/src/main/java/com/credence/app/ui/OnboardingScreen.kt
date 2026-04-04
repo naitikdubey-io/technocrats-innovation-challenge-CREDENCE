@@ -23,11 +23,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.credence.app.R // Make sure this matches your package!
-import com.yourcompany.credence.ui.theme.BlushPink
-import com.yourcompany.credence.ui.theme.DeepEspresso
-import com.yourcompany.credence.ui.theme.SoftPeach
-import com.yourcompany.credence.ui.theme.WarmIvory
+import com.credence.app.R
+import com.credence.app.ui.theme.BlushPink
+import com.credence.app.ui.theme.DeepEspresso
+import com.credence.app.ui.theme.SoftPeach
+import com.credence.app.ui.theme.WarmIvory
 
 
 @Composable

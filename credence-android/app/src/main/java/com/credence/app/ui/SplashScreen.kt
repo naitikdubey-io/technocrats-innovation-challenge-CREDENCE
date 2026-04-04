@@ -17,7 +17,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.credence.app.R // Make sure this matches your package name!
-import com.yourcompany.credence.ui.theme.DeepEspresso
+import com.credence.app.ui.theme.DeepEspresso
+
 
 import kotlinx.coroutines.delay
 
